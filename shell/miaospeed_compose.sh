@@ -16,6 +16,7 @@ Install(){
         docker compose up -d
     else
         wget https://raw.githubusercontent.com/moshaoli688/moshaoli_shell/master/docker/miaospeed/docker-compose.yaml -O docker-compose.yaml
+        docker compose up -d
     fi
     echo "部署完毕"
     echo "默认端口：9966"
