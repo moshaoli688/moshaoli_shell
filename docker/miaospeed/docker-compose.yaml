@@ -1,0 +1,32 @@
+services:
+  miaospeed:
+    image: moshaoli688/miaospeed:latest
+    restart: "always"
+    ports:
+      - "9966:9966"
+      - "5220:9966"
+    environment:
+      - TZ=Asia/Shanghai
+      - MIAOSPEED_MTLS=1
+      - MIAOSPEED_CONNTHREAD=16
+      - MIAOSPEED_WHITELIST=5685382633,5713834539,5335449558,5563434052,5451781317,6253253025,6198307617
+    mem_limit: 2048m
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200m"
+        max-file: "3"
+  watchtower_miaospeed:
+    image: containrrr/watchtower:latest
+    container_name: watchtower_miaospeed
+    restart: always
+    environment: 
+        - TZ=Asia/Shanghai
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: miaospeed --cleanup --interval 3600
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200m"
+        max-file: "3"
