@@ -28,9 +28,10 @@ Uninstall(){
     docker rm miaospeed watchtower_miaospeed
 }
 echo "========================================================================================="
-echo "本脚本依赖 Docker，若没有请安装Docker"
-echo "Docker脚本：http://valve.file.myan.cc/miaoko/DockerMiaospeed/miaospeed_docker.sh"
-echo "Docker Compose脚本：http://valve.file.myan.cc/miaoko/DockerMiaospeed/miaospeed_docker.sh"
+echo "本脚本依赖 docker compose扩展，若没有请使用 docker版脚本"
+echo "本脚本支持自动升级。"
+echo "Docker脚本：https://raw.githubusercontent.com/moshaoli688/moshaoli_shell/master/shell/miaospeed_docker.sh"
+echo "Docker Compose脚本：https://raw.githubusercontent.com/moshaoli688/moshaoli_shell/master/shell/miaospeed_compose.sh"
 echo "========================================================================================="
 if [ -z "$command" ];then
     echo 安    装 ${0} install
