@@ -104,7 +104,7 @@ User=nobody
 Restart=on-failure
 RestartSec=5s
 WorkingDirectory=$MIAOSPEED_HOME
-ExecStart=$MIAOSPEED_HOME/bin/miaospeed.meta server -bind 0.0.0.0:19966  -mtls -whitelist 5685382633,5713834539,5335449558,5563434052,5451781317,6253253025,6198307617 -connthread 16 -mmdb GeoLite2-ASN.mmdb,GeoLite2-City.mmdb
+ExecStart=$MIAOSPEED_HOME/bin/miaospeed.meta server -bind 0.0.0.0:9966  -mtls -whitelist 5685382633,5713834539,5335449558,5563434052,5451781317,6253253025,6198307617 -connthread 16 -mmdb GeoLite2-ASN.mmdb,GeoLite2-City.mmdb
 LimitNOFILE=1048576
 
 [Install]
