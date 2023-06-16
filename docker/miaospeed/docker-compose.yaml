@@ -10,6 +10,13 @@ services:
       - MIAOSPEED_MTLS=1
       - MIAOSPEED_CONNTHREAD=16
       - MIAOSPEED_WHITELIST=5685382633,5713834539,5335449558,5563434052,5451781317,6253253025,6198307617
+    dns:
+     - 223.5.5.5 
+     - 223.6.6.6 
+     - 119.29.29.29 
+     - 114.114.114.114 
+     - 114.114.115.115 
+     - 182.254.116.116 
     mem_limit: 2048m
     logging:
       driver: "json-file"

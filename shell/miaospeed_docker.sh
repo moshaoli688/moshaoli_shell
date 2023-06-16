@@ -8,6 +8,7 @@ Install(){
     -e MIAOSPEED_MTLS=1  \
     -e MIAOSPEED_CONNTHREAD=16 \
     -e MIAOSPEED_WHITELIST=5451781317,5563434052,6198307617,5685382633,5713834539,6253253025,5335449558 \
+    --dns=223.5.5.5 --dns=223.6.6.6 --dns=119.29.29.29 --dns=114.114.114.114 --dns=114.114.115.115 --dns=182.254.116.116 \
     moshaoli688/miaospeed:latest
     docker run -d --name watchtower_miaospeed --restart always -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --interval 3600 miaospeed
 }
