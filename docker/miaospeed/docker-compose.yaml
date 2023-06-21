@@ -1,6 +1,7 @@
 services:
   miaospeed:
     image: moshaoli688/miaospeed:latest
+    container_name: miaoko_miaospeed
     restart: "always"
     ports:
       - "9966:9966"
@@ -31,7 +32,7 @@ services:
         - TZ=Asia/Shanghai
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: miaospeed --cleanup --interval 3600
+    command: miaoko_miaospeed --cleanup --interval 3600
     logging:
       driver: "json-file"
       options:
